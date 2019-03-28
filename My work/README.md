@@ -8,7 +8,7 @@
 
 //预处理数据（preprocess the data using preproc.py）
 
-```python
+```
 python preproc.py --fold_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/train_val_txt_files_per_fold/test_fold_is_0 --train_list age_train.txt --valid_list age_val.txt --data_dir /data/xdata/age-gender/aligned --output_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0
 
 The preproc.py program generates 'shards' for each of the datasets, each containing JPEG encoded RGB images of size 256x256
@@ -20,20 +20,24 @@ The preproc.py program generates 'shards' for each of the datasets, each contain
 
 //Now that we have generated the training and validation shards, we can start training the program. 
 
-//python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0
-
-//[gender]python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0 --max_steps 30000 --eta 0.001
+```
+python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0
+```
+[gender]
+```python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0 --max_steps 30000 --eta 0.001
+```
 
 //Train the model (fine-tuned Inception)
 
-  //python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0 --max_steps 15000 --model_type inception --batch_size 32 --eta 0.001 --dropout 0.5 --pre_model /data/pre-trained/inception_v3.ckpt
+  //```
+  python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0 --max_steps 15000 --model_type inception --batch_size 32 --eta 0.001 --dropout 0.5 --pre_model /data/pre-trained/inception_v3.ckpt```
 
 **4,eval.py**
 
 //评估模型
-
+```
 //python eval.py  --run_id 15918 --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0/ --eval_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/eval_gen_test_fold_is_0
-
+```
 **5，data.py**
 
 //提供一些数据处理函数
@@ -71,4 +75,6 @@ plus:
 
 **1,监督训练（对应正文3-train.py）**
 
-//tensorboard --logdir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0/run-31376
+```
+tensorboard --logdir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0/run-31376
+```
