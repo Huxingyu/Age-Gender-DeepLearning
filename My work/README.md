@@ -1,3 +1,4 @@
+对[Age/Gender detection in Tensorflow](URL'https://github.com/dpressel/rude-carnie')项目各个文件做大致解释。
 **1，guees.py**
 
 //是主操作程序
@@ -29,8 +30,9 @@ python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/
 
 //Train the model (fine-tuned Inception)
 
-  //```
-  python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0 --max_steps 15000 --model_type inception --batch_size 32 --eta 0.001 --dropout 0.5 --pre_model /data/pre-trained/inception_v3.ckpt```
+ ```
+python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0 --max_steps 15000 --model_type inception --batch_size 32 --eta 0.001 --dropout 0.5 --pre_model /data/pre-trained/inception_v3.ckpt
+ ```
 
 **4,eval.py**
 
