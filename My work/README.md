@@ -8,9 +8,11 @@
 
 //预处理数据（preprocess the data using preproc.py）
 
-//python preproc.py --fold_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/train_val_txt_files_per_fold/test_fold_is_0 --train_list age_train.txt --valid_list age_val.txt --data_dir /data/xdata/age-gender/aligned --output_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0
+```python
+python preproc.py --fold_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/train_val_txt_files_per_fold/test_fold_is_0 --train_list age_train.txt --valid_list age_val.txt --data_dir /data/xdata/age-gender/aligned --output_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0
 
-//The preproc.py program generates 'shards' for each of the datasets, each containing JPEG encoded RGB images of size 256x256
+The preproc.py program generates 'shards' for each of the datasets, each containing JPEG encoded RGB images of size 256x256
+```
 
 **3,train.py**
 
