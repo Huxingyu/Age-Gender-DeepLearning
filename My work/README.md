@@ -6,6 +6,10 @@
 
 //年龄检测，性别检测，人脸检测
 
+```python
+python2.7 guess.py --model_type inception --model_dir ./22801 --filename test1.jpg
+```
+
 **2，preproc.py**
 
 //预处理数据（preprocess the data using preproc.py）
