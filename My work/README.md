@@ -7,7 +7,9 @@
 //年龄检测，性别检测，人脸检测
 
 ```python
-python2.7 guess.py --model_type inception --model_dir ./22801 --filename test1.jpg
+[ok]python2.7 guess.py --model_type inception --model_dir ./22801 --filename test.jpg //age
+[ok]python guess.py --class_type gender --model_type inception --model_dir ./21936 --filename test3.jpg
+
 ```
 
 **2，preproc.py**
@@ -18,6 +20,8 @@ python2.7 guess.py --model_type inception --model_dir ./22801 --filename test1.j
 python preproc.py --fold_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/train_val_txt_files_per_fold/test_fold_is_0 --train_list age_train.txt --valid_list age_val.txt --data_dir /data/xdata/age-gender/aligned --output_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0
 
 The preproc.py program generates 'shards' for each of the datasets, each containing JPEG encoded RGB images of size 256x256
+
+[ok]python preproc.py --fold_dir /home/huxingyu/dpressel/dev/work/AgeGenderDeepLearning/Folds/train_val_txt_files_per_fold/test_fold_is_0 --train_list gender_train.txt --valid_list gender_val.txt --data_dir /home/huxingyu/Documents/CNN/rude-carnie-master/data/aligned/aligned --output_dir /home/huxingyu/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0
 ```
 
 **3,train.py**
@@ -28,6 +32,7 @@ The preproc.py program generates 'shards' for each of the datasets, each contain
 
 ```
 python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/age_test_fold_is_0
+[ok]python train.py --train_dir /home/huxingyu/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0
 ```
 [gender]
 ```python train.py --train_dir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0 --max_steps 30000 --eta 0.001
@@ -83,5 +88,6 @@ plus:
 **1,监督训练（对应正文3-train.py）**
 
 ```
-tensorboard --logdir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0/run-31376
+tensorboard --logdir /home/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0/run-2650
+[ok]tensorboard logdir=mylogs:/home/huxingyu/dpressel/dev/work/AgeGenderDeepLearning/Folds/tf/gen_test_fold_is_0/run-2650
 ```
