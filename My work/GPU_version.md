@@ -1,0 +1,7 @@
+- GPU:GTX1060 
+
+- NVIDIA DRIVER VISION:390
+
+- CUDA Version 9.1.85
+
+- Cudnn version 750
