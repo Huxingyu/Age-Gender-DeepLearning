@@ -10,4 +10,4 @@
 
 - Bazel version 0.24.1
 
-- GCC version 7
+- GCC version 5.5
